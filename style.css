@@ -1,6 +1,7 @@
 html{
     font-size: 14px;
 }
+
 body{
     width:100vw;
     height:100vh;
@@ -9,21 +10,23 @@ body{
     font-family: 'Montserrat', sans-serif;
     display:grid;
     grid-template-rows: 10vh 90vh 20vh;
+}
+
+body#homepage{
     background: linear-gradient(to right, #2E6F95, #455E89,#5C4D7D,#723C70,#892B64);
 }
 
-
-footer{
+#bas-page{
     background-color: white;
 }
 
-body > header {
+#homepage > header {
     font-size:1.2rem;
     width: 100%;
     border-bottom: 1px solid white;
 }
 
-body > header nav{
+#homepage > header nav{
     display:grid;
     grid-template-columns: 20% 80%;
 }
@@ -45,7 +48,6 @@ body > header nav{
 }
 
 svg{
-
     height:50px;
     width:50px;
 }
@@ -55,17 +57,47 @@ a{
     margin-left:135px;
 }
 
+
+main{
+    margin-left:10%;
+    margin-right:10%;
+   
+}
+.main-haut{
+    height:60vh;
+}
+
+.main-bas{
+    height:60vh;
+}
+
+img-main{
+    display:flex;
+    justify-content:end;
+    
+}
 h1{
     font-family:'Cabin', sans-serif;
     font-size:6rem;
     font-weight:700;
     color:white;
+    margin-bottom:-50px;
 }
 h2{
    font-family:'Cabin';
     font-size:3.5rem;
     font-weight:700; 
     color:white;
+}
+
+section{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:1.5rem;
+}
+
+article{
+    background-color:#b7094c;
 }
 
 h3{
@@ -75,7 +107,25 @@ h3{
     color:white;
 }
 
+h4{
+    font-family:'Cabin';
+    font-size:1.7rem;
+    font-weight:700; 
+    color:white;
+}
 
+h5{
+    font-family:'Cabin';
+    font-size:1.3rem;
+    font-weight:600; 
+    color:white;
+}
 
+p{
+    font-family:Montserrat;
+}
 
-
+#lienProjet{
+    font-family:Montserrat;
+    text-underline-offset:0.25rem;
+}
