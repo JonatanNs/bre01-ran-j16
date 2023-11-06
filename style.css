@@ -1,4 +1,4 @@
-html{
+/*html{
     font-size: 14px;
 }
 
@@ -21,33 +21,52 @@ body#homepage{
 }
 
 #homepage > header {
-    font-size:1.2rem;
     width: 100%;
     border-bottom: 1px solid white;
-}
-
-#homepage > header nav{
     display:grid;
     grid-template-columns: 20% 80%;
 }
 
-.droite{
+#homepage > header figure {
+    margin:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#homepage > header figure img {
+    height:8vh;
+}
+
+#homepage > header nav a {
+    color: white;
+    text-decoration: none;
+}
+
+#homepage > header nav a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+}
+
+#homepage > header nav ul{
     display:grid;
-    grid-template-columns:80%;
     display:flex;
     align-items:center;
     justify-content:center;
+    list-style: none;
+    height:100%;
+    margin:0;
+    padding:0;
+    text-transform: uppercase;
+    font-size:1.2rem;
 }
 
-.gauche{
-    display:grid;
-    grid-template-columns:20%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
+#homepage > header nav li {
+    display: flex;
+    align-items: center;
+}   
 
-svg{
+#img-nav{
     height:50px;
     width:50px;
 }
@@ -58,46 +77,59 @@ a{
 }
 
 
-main{
-    margin-left:10%;
-    margin-right:10%;
+#homepage > main {
+    grid-column: 1 / 4;
+    display: grid;
+    grid-template-rows: 60vh 60vh;
+    grid-template-columns: 10% 80% 10%;
    
 }
-.main-haut{
-    height:60vh;
+#homepage > main > section:first-of-type figure img{
+    width:100%;
 }
 
-.main-bas{
-    height:60vh;
-}
-
-img-main{
-    display:flex;
-    justify-content:end;
+#img-main{
+    height:250px;
+    width:250px;
+    
     
 }
-h1{
-    font-family:'Cabin', sans-serif;
-    font-size:6rem;
-    font-weight:700;
-    color:white;
-    margin-bottom:-50px;
+
+#homepage > main > section:first-of-type {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: 70% 30%;
 }
-h2{
-   font-family:'Cabin';
-    font-size:3.5rem;
-    font-weight:700; 
+
+#homepage > main > section:first-of-type h1 {
+    margin:0;
+    font-size: 6rem;
     color:white;
+    font-weight: 700;
+    font-family: 'Cabin', sans-serif;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    align-self: flex-end;
+}
+
+#homepage > main > section:first-of-type h2 {
+    margin:0;
+    font-size: 3.5rem;
+    color:white;
+    font-weight: 700;
+    font-family: 'Cabin', sans-serif;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
 }
 
 section{
     display:grid;
     grid-template-columns: repeat(3,1fr);
-    gap:1.5rem;
 }
 
 article{
     background-color:#b7094c;
+    width:300px;
 }
 
 h3{
@@ -128,4 +160,248 @@ p{
 #lienProjet{
     font-family:Montserrat;
     text-underline-offset:0.25rem;
+}*/
+
+/*
+
+FONTS
+
+font-family: 'Cabin', sans-serif; // 600, 700
+font-family: 'Montserrat', sans-serif; // 200, 400, 600
+
+*/
+
+/*
+
+COLORS
+
+#b7094c;
+#a01a58;
+#892b64;
+#723c70;
+#5c4d7d;
+#455e89;
+#2e6f95;
+#060b0e;
+#ffffff;
+
+*/
+
+html {
+    font-size: 14px;
+}
+
+body {
+    margin:0;
+    padding:0;
+    max-width:100vw;
+    min-height:100vh;
+    display: grid;
+    grid-template-rows: 10vh 120vh 20vh;
+}
+
+body#homepage {
+    background: linear-gradient(
+            to right,
+            #2E6F95,
+            #455E89,
+            #5C4D7D,
+            #723C70,
+            #892B64
+    );
+}
+
+/* HEADER */
+
+#homepage > header {
+    border-bottom: 1px solid white;
+    grid-column: 1 / 4;
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+#homepage > header figure {
+    margin:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#homepage > header figure img {
+    height:8vh;
+}
+
+#homepage > header nav ul {
+    height:100%;
+    margin:0;
+    padding:0;
+    display: grid;
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#homepage > header nav li {
+    display: flex;
+    align-items: center;
+}
+
+#homepage > header nav a {
+    color: white;
+    text-decoration: none;
+}
+
+#homepage > header nav a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+}
+
+/* MAIN */
+
+#homepage > main {
+    grid-column: 1 / 4;
+    display: grid;
+    grid-template-rows: 60vh 60vh;
+    grid-template-columns: 10% 80% 10%;
+}
+
+#homepage > main > section:first-of-type {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+#homepage > main > section:first-of-type h1 {
+    margin:0;
+    font-size: 6rem;
+    color:white;
+    font-weight: 700;
+    font-family: 'Cabin', sans-serif;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    align-self: flex-end;
+}
+
+#homepage > main > section:first-of-type h2 {
+    margin:0;
+    font-size: 3.5rem;
+    color:white;
+    font-weight: 700;
+    font-family: 'Cabin', sans-serif;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+#homepage > main > section:first-of-type figure {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#homepage > main > section:first-of-type figure img{
+    width:100%;
+}
+
+#homepage > main > section:last-of-type {
+    grid-column: 2 / 3;
+}
+
+#homepage > main > section:last-of-type h2 {
+    margin:0;
+    padding: 0;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color:white;
+    font-weight: 700;
+    font-family: 'Cabin', sans-serif;
+}
+
+#homepage > main > section:last-of-type ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1.5rem;
+    list-style: none;
+    margin:0;
+    padding:0;
+    margin-top: 4rem;
+}
+
+#homepage > main > section:last-of-type ul li{
+    padding: 2.5rem 1rem;
+    color: white;
+    background-color: #b7094c;
+}
+
+#homepage > main > section:last-of-type ul li h3{
+    margin:0;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: 'Cabin', sans-serif;
+}
+
+#homepage > main > section:last-of-type ul li h4{
+    margin:0;
+    margin-top: 1.3rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-family: 'Cabin', sans-serif;
+}
+
+#homepage > main > section:last-of-type ul li p{
+    font-family: 'Montserrat', sans-serif;
+}
+
+#homepage > main > section:last-of-type ul li a{
+    color:white;
+    font-family: 'Montserrat', sans-serif;
+    text-underline-offset: 0.25rem;
+}
+
+
+
+
+
+/* FOOTER */
+
+#homepage > footer {
+    background-color:white;
+    grid-column: 1 / 4;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-family: 'Montserrat', sans-serif;
+}
+
+#homepage > footer p{
+    grid-column: 1 / 4;
+    text-align: center;
+    color: #060b0e;
+}
+
+#homepage > footer ul {
+    list-style: none;
+    text-align: center;
+}
+
+#homepage > footer ul li{
+    padding: 0.25rem 0;
+}
+
+#homepage > footer ul:first-of-type a{
+    grid-column: 1 / 2;
+    color: #a01a58;
+}
+
+#homepage > footer ul:nth-of-type(2) a{
+    grid-column: 2 / 3;
+    color: #723c70;
+}
+
+#homepage > footer ul:last-of-type a{
+    grid-column: 3 / 4;
+    color: #455e89;
 }
